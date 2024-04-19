@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Madimi+One&display=swap");
+
+html {
+  color-scheme: light dark;
+  --scroll-behavior: smooth !important;
+  scroll-behavior: smooth !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dot-size: 1px;
+  --dot-space: 16px;
+  color-scheme: light;
+  --grid-color: 0, 0%, 0%, 0.05;
+  --dot-color: 0, 0%, 0%, 1;
+  --background: 0, 0%, 100%;
+  --foreground: 222.2, 84%, 4.9%;
+  --card: 0, 0%, 100%;
+  --card-foreground: 222.2, 84%, 4.9%;
+  --popover: 0, 0%, 100%;
+  --popover-foreground: 222.2, 84%, 4.9%;
+  --primary: 221.2, 83.2%, 53.3%;
+  --primary-foreground: 210, 40%, 98%;
+  --secondary: 210, 40%, 96.1%;
+  --secondary-foreground: 222.2, 47.4%, 11.2%;
+  --muted: 210, 40%, 96.1%;
+  --muted-foreground: 215.4, 16.3%, 46.9%;
+  --accent: 210, 40%, 96.1%;
+  --accent-foreground: 222.2, 47.4%, 11.2%;
+  --destructive: 0, 84.2%, 60.2%;
+  --destructive-foreground: 210, 40%, 98%;
+  --border: 214.3, 31.8%, 91.4%;
+  --input: 214.3, 31.8%, 91.4%;
+  --ring: 221.2, 83.2%, 53.3%;
+  --radius: 1rem;
+}
+
+:root:has(.dark) {
+  color-scheme: dark;
+  --grid-color: 0, 0%, 100%, 0.05;
+  --dot-color: 0, 0%, 100%, 0.4;
+  --background: 222.2, 84%, 4.9%;
+  --foreground: 210, 40%, 98%;
+  --card: 222.2, 84%, 4.9%;
+  --card-foreground: 210, 40%, 98%;
+  --popover: 222.2, 84%, 4.9%;
+  --popover-foreground: 210, 40%, 98%;
+  --primary: 217.2, 91.2%, 59.8%;
+  --primary-foreground: 222.2, 47.4%, 11.2%;
+  --secondary: 217.2, 32.6%, 17.5%;
+  --secondary-foreground: 210, 40%, 98%;
+  --muted: 217.2, 32.6%, 17.5%;
+  --muted-foreground: 215, 20.2%, 65.1%;
+  --accent: 217.2, 32.6%, 17.5%;
+  --accent-foreground: 210, 40%, 98%;
+  --destructive: 0, 62.8%, 30.6%;
+  --destructive-foreground: 210, 40%, 98%;
+  --border: 217.2, 32.6%, 17.5%;
+  --input: 217.2, 32.6%, 17.5%;
+  --ring: 224.3, 76.3%, 48%;
+}
+
+body {
+  z-index: -5;
+  background-color: hsla(var(--background));
+  color: hsla(var(--foreground));
+  font-family: "Kanit", sans-serif;
+}
+
+.underlay {
+  z-index: -4;
+  position: fixed;
+  inset: 0;
+}
+.underlay-1 {
+  background-color: transparent;
+  background-image: linear-gradient(
+      0deg,
+      transparent 24%,
+      hsla(var(--grid-color)),
+      hsla(var(--grid-color)),
+      transparent 27%,
+      transparent 74%,
+      hsla(var(--grid-color)),
+      hsla(var(--grid-color)),
+      transparent 77%,
+      transparent
+    ),
+    linear-gradient(
+      90deg,
+      transparent 24%,
+      hsla(var(--grid-color)),
+      hsla(var(--grid-color)),
+      transparent 27%,
+      transparent 74%,
+      hsla(var(--grid-color)),
+      hsla(var(--grid-color)),
+      transparent 77%,
+      transparent
+    );
+  background-size: 48px 48px;
+}
+/* .underlay-2 {
+  z-index: -5;
+  background: linear-gradient(
+        90deg,
+        hsla(var(--background)) calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center / var(--dot-space) var(--dot-space),
+    linear-gradient(
+        hsla(var(--background)) calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center / var(--dot-space) var(--dot-space),
+    hsl(var(--dot-color));
+} */
+.underlay-overlay {
+  z-index: -3;
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(transparent, hsla(var(--background), 1));
+}
+
+section {
+  min-height: 1000px;
+  max-width: 80rem;
+  padding: 1rem;
+  padding-top: 5rem;
+  margin: 0 auto;
+}

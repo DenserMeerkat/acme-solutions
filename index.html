@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ACME Solutions</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="./styles/keyframes.css" />
+    <link rel="stylesheet" href="./styles/ripple.css" />
+    <link rel="stylesheet" href="./styles/header.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body class="dark">
+    <div class="underlay underlay-1"></div>
+    <div class="underlay underlay-2"></div>
+    <div class="underlay-overlay"></div>
+    <header>
+      <div class="header-wrapper">
+        <a href="#" class="logo">
+          <span class="material-symbols-outlined icon"> hub </span>
+          <span class="label">ACME</span>
+        </a>
+        <nav>
+          <ul>
+            <li class="home active">
+              <a href="#home">
+                <span class="material-symbols-outlined icon"> home </span>
+                <span class="label hidden sm:block">Home</span>
+              </a>
+            </li>
+            <li class="about">
+              <a href="#about">
+                <span class="material-symbols-outlined icon"> info </span>
+                <span class="label hidden sm:block">About</span>
+              </a>
+            </li>
+            <li class="services">
+              <a href="#services">
+                <span class="material-symbols-outlined icon"> category </span>
+                <span class="label hidden sm:block">Services</span>
+              </a>
+            </li>
+            <li class="contact">
+              <a href="#contact">
+                <span class="material-symbols-outlined icon"> mail </span>
+                <span class="label hidden sm:block">Contact</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+        <button id="dark-mode-toggle" class="dark-mode-toggle">
+          <svg
+            width="100%"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 496 496"
+          >
+            <path
+              fill="currentColor"
+              d="M8,256C8,393,119,504,256,504S504,393,504,256,393,8,256,8,8,119,8,256ZM256,440V72a184,184,0,0,1,0,368Z"
+              transform="translate(-8 -8)"
+            />
+          </svg>
+        </button>
+      </div>
+    </header>
+    <main>
+      <section id="home">
+        <h1>Welcome to TechOps Solutions</h1>
+        <p>
+          We are a team of professionals who are dedicated to providing the best
+          solutions for your business. We offer a wide range of services that
+          can help you grow your business and reach your goals. Whether you need
+          help with web development, digital marketing, or IT support, we have
+          the expertise and experience to help you succeed.
+        </p>
+      </section>
+      <section id="about">
+        <h2>About Us</h2>
+        <p>
+          TechOps Solutions was founded in 2010 with the goal of helping
+          businesses succeed in the digital age. Our team of experts has years
+          of experience in web development, digital marketing, and IT support.
+          We are passionate about what we do and are committed to providing the
+          best solutions for our clients.
+        </p>
+      </section>
+      <section id="services">
+        <h2>Our Services</h2>
+        <div class="service">
+          <h3>Web Development</h3>
+          <p>
+            We offer a wide range of web development services, including website
+            design, e-commerce development, and custom web applications. Our
+            team of developers has the skills and experience to create
+            high-quality websites that are tailored to your business needs.
+          </p>
+        </div>
+        <div class="service">
+          <h3>Digital Marketing</h3>
+          <p>
+            Our digital marketing services can help you reach your target
+            audience and grow your business online. We offer a variety of
+            services, including search engine optimization (SEO), social media
+            marketing, and pay-per-click advertising.
+          </p>
+        </div>
+        <div class="service">
+          <h3>IT Support</h3>
+          <p>
+            Our IT support services can help you keep your business running
+            smoothly and efficiently. We offer a range of services, including
+            network setup and maintenance, data backup and recovery, and
+            cybersecurity solutions.
+          </p>
+        </div>
+      </section>
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <p>
+          If you have any questions or would like to learn more about our
+          services, please feel free to contact us. We are always happy to help
+          and are committed to providing the best solutions for your business.
+        </p>
+        <button class="ripple">Contact Us</button>
+      </section>
+    </main>
+    <script src="./js/darkMode.js"></script>
+    <script src="./js/ripple.js"></script>
+    <script src="./js/nav.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </body>
+</html>

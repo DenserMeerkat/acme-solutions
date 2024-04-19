@@ -1,0 +1,33 @@
+button {
+  all: unset;
+  position: relative;
+  overflow: hidden;
+}
+
+button:hover {
+  filter: brightness(80%);
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.92);
+}
+
+button svg {
+  pointer-events: none;
+}
+
+a {
+  all: unset;
+  position: relative;
+  overflow: hidden;
+}
+
+a:hover {
+  filter: brightness(80%);
+  cursor: pointer;
+}
+
+a svg {
+  pointer-events: none;
+}
