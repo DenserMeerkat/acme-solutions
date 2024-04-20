@@ -1,6 +1,6 @@
 header {
   width: 100%;
-  background: linear-gradient(
+  background: -webkit-linear-gradient(
     hsl(var(--background)),
     hsl(var(--background)),
     hsl(var(--background)),
@@ -26,7 +26,7 @@ header {
     align-items: center;
     gap: 0.5rem;
     padding: 0.4rem 0.8rem;
-    background-image: linear-gradient(
+    background-image: -webkit-linear-gradient(
       hsla(var(--muted), 0.6),
       hsla(var(--muted))
     );
@@ -182,7 +182,7 @@ nav {
 
     li.active::after {
       inset: 0;
-      background-image: linear-gradient(
+      background-image: -webkit-linear-gradient(
         hsla(var(--muted), 0.9),
         hsla(var(--muted), 0.6)
       );
