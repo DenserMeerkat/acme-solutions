@@ -2,15 +2,17 @@ button {
   all: unset;
   position: relative;
   overflow: hidden;
+  transition: transform 0.3s ease;
 }
 
 button:hover {
-  filter: brightness(80%);
+  filter: brightness(90%);
   cursor: pointer;
 }
 
 button:active {
   transform: scale(0.92);
+  transition: transform 0.3s ease;
 }
 
 button svg {
@@ -21,11 +23,17 @@ a {
   all: unset;
   position: relative;
   overflow: hidden;
+  transition: transform 0.3s ease;
 }
 
 a:hover {
-  filter: brightness(80%);
+  filter: brightness(90%);
   cursor: pointer;
+}
+
+a:active {
+  transform: scale(0.92);
+  transition: transform 0.3s ease;
 }
 
 a svg {

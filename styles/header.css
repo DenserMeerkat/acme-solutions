@@ -3,10 +3,9 @@ header {
   background: linear-gradient(
     hsl(var(--background)),
     hsl(var(--background)),
-    hsl(var(--background), 0.9),
-    hsl(var(--background), 0.8),
+    hsl(var(--background)),
+    hsla(var(--background), 0.9),
     hsla(var(--background), 0.6),
-    hsla(var(--background), 0.4),
     transparent
   );
   position: fixed;
@@ -16,9 +15,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 84rem;
+    max-width: 80rem;
     padding: 2px 12px;
     margin: 0 auto;
+    animation: fadeIn 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
   .logo {
@@ -26,10 +26,14 @@ header {
     align-items: center;
     gap: 0.5rem;
     padding: 0.4rem 0.8rem;
-    backdrop-filter: blur(40px);
+    background-image: linear-gradient(
+      hsla(var(--muted), 0.6),
+      hsla(var(--muted))
+    );
+
     border-radius: 9999px;
     border: 1px solid hsla(var(--primary), 0);
-    transition: all 0.2s;
+    transition: border 0.2s;
 
     &:hover {
       color: hsla(var(--primary));
@@ -38,22 +42,14 @@ header {
     }
 
     .icon {
-      font-size: 1.125rem;
-      font-weight: 800;
+      color: hsla(var(--primary));
+      height: 20px;
+      width: 20px;
     }
 
     .label {
       font-weight: 600;
       letter-spacing: 0.1em;
-    }
-
-    @media (max-width: 640px) {
-      & {
-        padding: 0.6rem;
-      }
-      .label {
-        display: none;
-      }
     }
   }
   .dark-mode-toggle {
@@ -63,9 +59,34 @@ header {
     border: 2px solid hsla(var(--border));
     padding: 8px;
     cursor: pointer;
-    border-radius: 12px;
-    width: 16px;
-    height: 16px;
+    border-radius: 0.8rem;
+    transition: all 0.2s ease-in-out;
+
+    .icon {
+      height: 18px;
+      width: 18px;
+    }
+    .sun {
+      display: block;
+    }
+
+    .moon {
+      display: none;
+    }
+    :root:has(.dark) & {
+      .sun {
+        display: none;
+      }
+
+      .moon {
+        display: block;
+      }
+    }
+  }
+
+  .dark-mode-toggle:hover {
+    border-radius: 99px;
+    transition: all 0.2s ease-in-out;
   }
 }
 
@@ -75,7 +96,7 @@ nav {
   margin: 1rem auto;
   border-radius: 9999px;
   border: 2px solid hsla(var(--border));
-  animation: slideInFromTop 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation: slideInFromTop 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
   ul {
     display: flex;
@@ -125,6 +146,20 @@ nav {
       }
     }
 
+    li.active {
+      color: hsla(var(--primary));
+
+      @media (max-width: 640px) {
+        a {
+          align-items: center;
+          gap: 0.5rem;
+          .label {
+            display: block;
+          }
+        }
+      }
+    }
+
     li::after {
       position: absolute;
       content: "";
@@ -132,21 +167,38 @@ nav {
       inset: 8px;
       border-radius: 1.25rem;
       background-color: transparent;
-      border: 1px solid hsla(var(--primary), 0);
+      border: 2px solid hsla(var(--muted), 0);
       transition: all 0.2s;
       animation: fadeIn 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
 
     li:hover::after {
       inset: 0;
-      border: 1px solid hsla(var(--primary));
+      border: 2px solid hsla(var(--muted));
       transition: all 0.2s;
     }
 
     li.active::after {
       inset: 0;
-      background-color: hsla(var(--primary), 0.6);
+      background-image: linear-gradient(
+        hsla(var(--muted), 0.9),
+        hsla(var(--muted), 0.6)
+      );
       transition: all 0.2s;
     }
+  }
+}
+
+@media (max-width: 640px) {
+  header {
+    .header-wrapper {
+      padding: 0.8rem 1.2rem;
+    }
+  }
+  nav {
+    position: absolute;
+    top: 88svh;
+    right: 0;
+    left: 0;
   }
 }

@@ -5,6 +5,14 @@ window.onscroll = () => {
 
   sections.forEach((section) => {
     const sectionTop = section.offsetTop;
+    if (window.scrollY === 0) {
+      current = "home";
+    } else if (
+      window.scrollY >=
+      document.documentElement.scrollHeight - window.innerHeight - 100
+    ) {
+      current = "contact";
+    }
     if (scrollY >= sectionTop - 0) {
       current = section.getAttribute("id");
     }
