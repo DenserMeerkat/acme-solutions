@@ -12,6 +12,7 @@
 
 .hero {
   height: fit-content;
+  min-height: 70vh;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -247,5 +248,9 @@
         opacity: 0;
       }
     }
+  }
+
+  @media (max-width: 640px) {
+    min-height: 80vh;
   }
 }

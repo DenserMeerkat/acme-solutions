@@ -111,9 +111,14 @@
     }
   }
   .content {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-family: monospace;
     color: hsla(var(--foreground), 0.9);
+    padding: 1.2rem 0;
+
+    @media (max-width: 640px) {
+      font-size: 0.8rem;
+    }
   }
 
   .footer {
