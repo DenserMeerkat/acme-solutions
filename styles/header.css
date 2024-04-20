@@ -131,6 +131,7 @@ nav {
         animation: fadeIn 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
         .icon {
+          padding: 1px 0 0;
           display: none;
           font-size: 18px;
         }
@@ -152,13 +153,14 @@ nav {
     li.active {
       color: hsla(var(--primary));
 
-      @media (max-width: 640px) {
-        a {
-          align-items: center;
-          gap: 0.5rem;
-          .label {
-            display: block;
-          }
+      a {
+        align-items: center;
+        gap: 0.5rem;
+        .icon {
+          display: block;
+        }
+        .label {
+          display: block;
         }
       }
     }
