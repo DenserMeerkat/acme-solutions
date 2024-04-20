@@ -13,7 +13,7 @@ window.onscroll = () => {
     ) {
       current = "contact";
     }
-    if (scrollY >= sectionTop - 0) {
+    if (scrollY >= sectionTop - 60) {
       current = section.getAttribute("id");
     }
   });

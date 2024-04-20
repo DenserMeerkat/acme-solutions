@@ -42,7 +42,40 @@
         letter-spacing: 1px;
         color: hsla(var(--foreground), 0.6);
       }
+      .contact {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        padding: 0.5rem 0 1rem;
 
+        a {
+          font-size: 0.8rem;
+          letter-spacing: 1px;
+          color: hsla(var(--foreground), 0.8);
+          transition: color 0.4s;
+          &:hover {
+            color: hsla(var(--primary));
+            transition: color 0.4s;
+            text-decoration: underline;
+          }
+        }
+
+        .address {
+          display: flex;
+          align-items: start;
+          gap: 0.6rem;
+          font-size: 0.8rem;
+          letter-spacing: 1px;
+          color: hsla(var(--foreground), 0.8);
+
+          [data-lucide] {
+            color: hsla(var(--primary), 0.6);
+            margin-top: 2px;
+            height: 16px;
+            width: 16px;
+          }
+        }
+      }
       form {
         padding: 1rem 0;
         display: flex;
