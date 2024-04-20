@@ -32,7 +32,7 @@ header {
     );
 
     border-radius: 9999px;
-    border: 1px solid hsla(var(--primary), 0);
+    border: 1px solid hsla(var(--border));
     transition: border 0.2s;
 
     &:hover {
@@ -91,17 +91,19 @@ header {
 }
 
 nav {
-  background-color: hsla(var(--background));
   width: fit-content;
   margin: 1rem auto;
-  border-radius: 9999px;
-  border: 2px solid hsla(var(--border));
   animation: slideInFromTop 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 0.2s;
+  padding-right: 4.2rem;
 
   ul {
     display: flex;
     align-items: center;
     height: fit-content;
+    background-color: hsla(var(--background));
+    border: 2px solid hsla(var(--border));
+    border-radius: 9999px;
     padding: 4px;
     gap: 4px;
 
@@ -200,5 +202,8 @@ nav {
     top: 88dvh;
     right: 0;
     left: 0;
+    animation: slideInFromBottom 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 0.2s;
+    padding-right: 0;
   }
 }
