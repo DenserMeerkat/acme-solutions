@@ -185,13 +185,13 @@
 
           &:hover:not(:active) {
             border: 2px solid hsla(var(--primary));
-            border-radius: 1.1rem;
+            border-radius: 0.8rem;
             transition: border-radius, border 0.4s;
           }
 
           &:active {
             border: 2px solid hsla(var(--primary));
-            border-radius: 1.1rem;
+            border-radius: 0.8rem;
             transition: border-radius, border 0.4s;
           }
 
