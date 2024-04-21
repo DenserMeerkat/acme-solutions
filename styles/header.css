@@ -133,7 +133,7 @@ nav {
         .icon {
           padding: 1px 0 0;
           display: none;
-          font-size: 18px;
+          font-size: 12px;
         }
 
         @media (max-width: 640px) {
