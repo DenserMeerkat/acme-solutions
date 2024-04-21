@@ -33,54 +33,6 @@ function getMaxHeight() {
 
 const cardData = [
   {
-    image: "../assets/images/1.webp",
-    title: "SwiftStream Mobile App",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-    date: "Jan 2023",
-  },
-  {
-    image: "../assets/images/2.webp",
-    title: "Cloudify SaaS Platform",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-    date: "Feb 2023",
-  },
-  {
-    image: "../assets/images/3.webp",
-    title: "MarketPro E-commerce",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-    date: "Mar 2023",
-  },
-  {
-    image: "../assets/images/4.webp",
-    title: "AI Insights Dashboard",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-    date: "Apr 2023",
-  },
-  {
-    image: "../assets/images/5.webp",
-    title: "DataDive Analytics",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-    date: "Sep 2023",
-  },
-  {
-    image: "../assets/images/6.webp",
-    title: "SecureNet Cybersecurity",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-    date: "Oct 2023",
-  },
-  {
-    image: "../assets/images/7.webp",
-    title: "DevOps Automation",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-    date: "Nov 2023",
-  },
-  {
-    image: "../assets/images/8.webp",
-    title: "IT Consultancy Services",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-    date: "Dec 2023",
-  },
-  {
     image: "../assets/images/9.webp",
     title: "SmartHome IoT Integration",
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
@@ -118,11 +70,6 @@ document.addEventListener("DOMContentLoaded", function () {
     projectsContainer.style.maxHeight = "none";
     shadowOverlay.style.display = "none";
     projectsFooter.style.paddingTop = "2rem";
-  } else {
-    removeAdditionalCards(cardData);
-    projectsContainer.style.maxHeight = getMaxHeight();
-    shadowOverlay.style.display = "block";
-    projectsFooter.style.paddingTop = "0";
   }
 
   function createCardElement(card) {
@@ -145,22 +92,20 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function appendCards(cards) {
-    while (projectsContainer.firstChild)
-      projectsContainer.removeChild(projectsContainer.firstChild);
     cards.forEach((card) => {
       const cardElement = createCardElement(card);
       projectsContainer.appendChild(cardElement);
     });
   }
 
-  function removeAdditionalCards(cards) {
-    while (projectsContainer.firstChild)
-      projectsContainer.removeChild(projectsContainer.firstChild);
-    const slicedCards = cards.slice(0, 8);
-    slicedCards.forEach((card) => {
-      const cardElement = createCardElement(card);
-      projectsContainer.appendChild(cardElement);
-    });
+  function removeAdditionalCards() {
+    const children = projectsContainer.children;
+    const startIndex = children.length - 4;
+    let count = 0;
+    while (count < 4 && children.length > 0) {
+      projectsContainer.removeChild(children[startIndex]);
+      count++;
+    }
   }
 
   showMoreButton.addEventListener("click", function () {
