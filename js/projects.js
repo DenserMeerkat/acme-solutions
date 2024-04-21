@@ -20,6 +20,17 @@ function initStateFromUrl() {
 
 initStateFromUrl();
 
+function getMaxHeight() {
+  const screenWidth = window.innerWidth;
+  let maxHeight = "none";
+  if (screenWidth <= 640) {
+    maxHeight = "1600px";
+  } else {
+    maxHeight = "600px";
+  }
+  return maxHeight;
+}
+
 const cardData = [
   {
     image: "https://source.unsplash.com/sv8oOQaUb-o",
@@ -109,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
     projectsFooter.style.paddingTop = "2rem";
   } else {
     removeAdditionalCards(cardData);
-    projectsContainer.style.maxHeight = "600px";
+    projectsContainer.style.maxHeight = getMaxHeight();
     shadowOverlay.style.display = "block";
     projectsFooter.style.paddingTop = "0";
   }
@@ -165,7 +176,7 @@ document.addEventListener("DOMContentLoaded", function () {
       removeAdditionalCards(cardData);
       this.textContent = "Show More";
       areMoreCardsShown = false;
-      projectsContainer.style.maxHeight = "600px";
+      projectsContainer.style.maxHeight = getMaxHeight();
       shadowOverlay.style.display = "block";
       projectsFooter.style.paddingTop = "0";
       updateUrlParams({ showMore: false });

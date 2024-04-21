@@ -122,6 +122,13 @@
   .card:hover {
     cursor: pointer;
   }
+
+  @media (max-width: 640px) {
+    padding: 4rem 2rem 0;
+    max-height: 1200px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
 }
 
 .projects-footer {
