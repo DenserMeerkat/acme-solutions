@@ -1,0 +1,115 @@
+.accordion {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 2rem 0;
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  @media (max-width: 640px) {
+    padding: 4rem 0.5rem 0;
+  }
+}
+
+.accordion-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 0.6rem;
+  border: 2px solid hsla(var(--muted));
+  background: linear-gradient(hsla(var(--muted), 0.4), hsla(var(--muted), 0.6));
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: linear-gradient(
+      hsla(var(--muted), 0.9),
+      hsla(var(--muted), 0.7)
+    );
+  }
+
+  .label-icon {
+    margin-right: 1rem;
+    color: hsla(var(--primary));
+
+    @media (max-width: 640px) {
+      display: none;
+    }
+  }
+
+  .icon {
+    margin-left: auto;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  @media (max-width: 640px) {
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+}
+
+input[type="checkbox"]:checked + .accordion-label {
+  color: hsla(var(--primary));
+  background: linear-gradient(hsla(var(--muted), 0.9), hsla(var(--muted), 0.7));
+
+  .icon {
+    transform: rotate(-180deg);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .label-icon {
+    display: none;
+  }
+}
+
+.accordion-content {
+  position: relative;
+  margin: 0 0.5rem;
+  display: flex;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  gap: 1rem;
+  box-sizing: content-box;
+  padding: 0.5rem 1rem 1rem;
+  background: hsla(var(--muted), 0.2);
+  border-right: 2px solid hsla(var(--muted));
+  border-left: 2px solid hsla(var(--muted));
+
+  .label-icon {
+    height: 50px;
+    width: 50px;
+    color: hsla(var(--primary));
+  }
+
+  p {
+    text-align: justify;
+    letter-spacing: 1px;
+    font-size: 1rem;
+  }
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+    align-items: center;
+
+    .label-icon {
+      height: 40px;
+      width: 40px;
+    }
+  }
+
+  &:is(:last-child) {
+    border-radius: 0 0 1rem 1rem;
+    border-bottom: 2px solid hsla(var(--muted));
+    padding-bottom: 1.1rem;
+  }
+}
+
+input[type="checkbox"]:checked + .accordion-label + .accordion-content {
+  height: fit-content;
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out;
+}

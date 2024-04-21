@@ -113,8 +113,6 @@ nav {
       border-radius: 9999px;
       list-style: none;
       transition: all 0.2s;
-      display: grid;
-      place-content: center;
 
       @media (max-width: 640px) {
         & {
@@ -123,6 +121,9 @@ nav {
       }
 
       a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         height: 100%;
         padding: 0 14px;
         z-index: 10;
