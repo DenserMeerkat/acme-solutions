@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A Concept TechOps Solutions website: 
+        ACME Solutions is a leading provider of innovative digital solutions that empower businesses to thrive in the digital age. Our team of experts specializes in web development, mobile app development, UI/UX design, digital marketing, cloud solutions, and e-commerce development. We are committed to delivering high-quality services that drive business growth and success. Contact us today to learn more about how we can help you achieve your digital goals.
+      "
+    />
     <title>ACME Solutions</title>
     <link rel="icon" type="image/icon" href="assets/favicon.ico" />
     <link rel="stylesheet" href="main.css" />
@@ -16,23 +22,26 @@
     <link rel="stylesheet" href="./styles/services.css" />
     <link rel="stylesheet" href="./styles/footer.css" />
     <link
-      rel="stylesheet"
+      rel="preload"
+      as="style"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      onload="this.onload=null;this.rel='stylesheet'"
       integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
     <link
-      rel="stylesheet"
+      rel="preload"
+      as="style"
       type="text/css"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"
-      integrity="sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+    <script src="./js/darkMode.js"></script>
+    <script src="./js/ripple.js"></script>
+    <script src="./js/nav.js"></script>
+    <script src="./js/projects.js"></script>
+    <script src="./js/lottie.js"></script>
   </head>
   <body class="dark">
     <div class="underlay underlay-1"></div>
@@ -72,7 +81,11 @@
             </li>
           </ul>
         </nav>
-        <button id="dark-mode-toggle" class="dark-mode-toggle">
+        <button
+          id="dark-mode-toggle"
+          aria-label="theme switch"
+          class="dark-mode-toggle"
+        >
           <i data-lucide="sun" class="icon sun"></i>
           <i data-lucide="moon" class="icon moon"></i>
         </button>
@@ -93,7 +106,7 @@
                 Forging <span>Futures</span>,<br />
                 Fostering <span>Tomorrow</span>.
               </h1>
-              <div class="buttons">
+              <div class="buttons" aria-label="Book a Meeting">
                 <button class="meet button">Book a Meeting</button>
                 <a href="#about" class="learn button">Learn More</a>
               </div>
@@ -111,11 +124,7 @@
         <div class="projects">
           <div class="card">
             <div class="image">
-              <img
-                src="https://source.unsplash.com/sv8oOQaUb-o"
-                alt="Project 1 Thumbnail"
-                loading="lazy"
-              />
+              <img src="../assets/images/1.webp" alt="Project 1 Thumbnail" />
             </div>
             <div class="content">
               <h3>SwiftStream Mobile App</h3>
@@ -128,11 +137,7 @@
           </div>
           <div class="card">
             <div class="image">
-              <img
-                src="https://source.unsplash.com/ONQeqIIF4nY"
-                alt="Project 2 Thumbnail"
-                loading="lazy"
-              />
+              <img src="../assets/images/2.webp" alt="Project 2 Thumbnail" />
             </div>
             <div class="content">
               <h3>Cloudify SaaS Platform</h3>
@@ -145,11 +150,7 @@
           </div>
           <div class="card">
             <div class="image">
-              <img
-                src="https://source.unsplash.com/hpjSkU2UYSU"
-                alt="Project 3 Thumbnail"
-                loading="lazy"
-              />
+              <img src="../assets/images/3.webp" alt="Project 3 Thumbnail" />
             </div>
             <div class="content">
               <h3>MarketPro E-commerce</h3>
@@ -162,11 +163,7 @@
           </div>
           <div class="card">
             <div class="image">
-              <img
-                src="https://source.unsplash.com/JKUTrJ4vK00"
-                alt="Project 4 Thumbnail"
-                loading="lazy"
-              />
+              <img src="../assets/images/4.webp" alt="Project 4 Thumbnail" />
             </div>
             <div class="content">
               <h3>AI Insights Dashboard</h3>
@@ -179,11 +176,7 @@
           </div>
           <div class="card">
             <div class="image">
-              <img
-                src="https://source.unsplash.com/IrRbSND5EUc"
-                alt="Project 5 Thumbnail"
-                loading="lazy"
-              />
+              <img src="../assets/images/5.webp" alt="Project 5 Thumbnail" />
             </div>
             <div class="content">
               <h3>DataDive Analytics</h3>
@@ -196,11 +189,7 @@
           </div>
           <div class="card">
             <div class="image">
-              <img
-                src="https://source.unsplash.com/EUsVwEOsblE"
-                alt="Project 6 Thumbnail"
-                loading="lazy"
-              />
+              <img src="../assets/images/6.webp" alt="Project 6 Thumbnail" />
             </div>
             <div class="content">
               <h3>SecureNet Cybersecurity</h3>
@@ -213,11 +202,7 @@
           </div>
           <div class="card">
             <div class="image">
-              <img
-                src="https://source.unsplash.com/OqtafYT5kTw"
-                alt="Project 7 Thumbnail"
-                loading="lazy"
-              />
+              <img src="../assets/images/7.webp" alt="Project 7 Thumbnail" />
             </div>
             <div class="content">
               <h3>DevOps Automation</h3>
@@ -230,11 +215,7 @@
           </div>
           <div class="card">
             <div class="image">
-              <img
-                src="https://source.unsplash.com/w7ZyuGYNpRQ"
-                alt="Project 8 Thumbnail"
-                loading="lazy"
-              />
+              <img src="../assets/images/8.webp" alt="Project 8 Thumbnail" />
             </div>
             <div class="content">
               <h3>IT Consultancy Services</h3>
@@ -449,6 +430,7 @@
                 <img
                   src="https://i.pravatar.cc/50?u=a042581f4e2902asdqwed"
                   alt="Testimonial image 1"
+                  loading="lazy"
                   height="50"
                   width="50"
                 />
@@ -474,6 +456,7 @@
                 <img
                   src="https://i.pravatar.cc/50?u=a042581f4e29dfsdqwed"
                   alt="Testimonial image 2"
+                  loading="lazy"
                   height="50"
                   width="50"
                 />
@@ -499,6 +482,7 @@
                 <img
                   src="https://i.pravatar.cc/50?u=a04r902asdqwed"
                   alt="Testimonial image 3"
+                  loading="lazy"
                   height="50"
                   width="50"
                 />
@@ -524,6 +508,7 @@
                 <img
                   src="https://i.pravatar.cc/50?u=a042581fqw2asdqwed"
                   alt="Testimonial image 4"
+                  loading="lazy"
                   height="50"
                   width="50"
                 />
@@ -549,6 +534,7 @@
                 <img
                   src="https://i.pravatar.cc/50?u=a042581f4e29wqe2asdqwed"
                   alt="Testimonial image 1"
+                  loading="lazy"
                   height="50"
                   width="50"
                 />
@@ -574,6 +560,7 @@
                 <img
                   src="https://i.pravatar.cc/50?u=a042581f4e2902asdqwed"
                   alt="Testimonial image 1"
+                  loading="lazy"
                   height="50"
                   width="50"
                 />
@@ -625,20 +612,22 @@
                     <a href="tel:9123456789"> 9123456789 </a>
                   </div>
                 </div>
-                <h5>Keep up to date</h5>
+                <subtitle>Keep up to date</subtitle>
                 <p>Join our newsletter for regular updates. No spam ever.</p>
                 <form class="form">
                   <input
+                    name="email"
                     type="text"
                     class="input"
                     placeholder="example@gmail.com"
+                    autocomplete="on"
                   />
                   <button type="submit" class="subscribe">Subscribe</button>
                 </form>
               </div>
               <div class="links">
                 <div class="link-col">
-                  <h4>Quick Links</h4>
+                  <span class="link-heading">Quick Links</span>
                   <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -650,7 +639,7 @@
                   </ul>
                 </div>
                 <div class="link-col">
-                  <h4>Services</h4>
+                  <span class="link-heading">Services</span>
                   <ul>
                     <li><a href="#contact">Cloud Management</a></li>
                     <li><a href="#contact">Data Analytics</a></li>
@@ -662,7 +651,7 @@
                   </ul>
                 </div>
                 <div class="link-col">
-                  <h4>Resources</h4>
+                  <span class="link-heading">Resources</span>
                   <ul>
                     <li><a href="#contact">Blog</a></li>
                     <li><a href="#contact">White Papers</a></li>
@@ -674,7 +663,7 @@
                   </ul>
                 </div>
                 <div class="link-col">
-                  <h4>Company</h4>
+                  <span class="link-heading">Company</span>
                   <ul>
                     <li><a href="#contact">About Us</a></li>
                     <li><a href="#contact">Careers</a></li>
@@ -705,23 +694,36 @@
                 >
               </div>
               <div class="social">
-                <a href="#contact"><i data-lucide="rss"></i></a>
-                <a href="#contact"><i data-lucide="twitter"></i></a>
-                <a href="#contact"><i data-lucide="instagram"></i></a>
-                <a href="#contact"><i data-lucide="facebook"></i></a>
-                <a href="#contact"><i data-lucide="linkedin"></i></a>
+                <a
+                  href="https://github.com/DenserMeerkat/ctf-tech-task"
+                  target="_blank"
+                  aria-label="Exampl"
+                  ><i data-lucide="github"></i
+                ></a>
+                <a href="#contact" aria-label="Find us on Twitter"
+                  ><i data-lucide="twitter"></i
+                ></a>
+                <a href="#contact" aria-label="Find us on Instagram"
+                  ><i data-lucide="instagram"></i
+                ></a>
+                <a href="#contact" aria-label="Find us on Facebook"
+                  ><i data-lucide="facebook"></i
+                ></a>
+                <a href="#contact" aria-label="Find us on LinkedIn"
+                  ><i data-lucide="linkedin"></i
+                ></a>
               </div>
             </div>
           </div>
         </section>
       </footer>
     </main>
-
-    <script src="./js/darkMode.js"></script>
-    <script src="./js/ripple.js"></script>
-    <script src="./js/nav.js"></script>
-    <script src="./js/projects.js"></script>
-    <script src="./js/lottie.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"
+      integrity="sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
       lucide.createIcons();

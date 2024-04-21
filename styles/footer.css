@@ -31,7 +31,7 @@
         }
       }
 
-      h5 {
+      subtitle {
         font-size: 0.9rem;
         font-weight: 500;
         letter-spacing: 1px;
@@ -135,7 +135,7 @@
         gap: 3rem;
 
         .link-col {
-          h4 {
+          .link-heading {
             font-size: 0.9rem;
             font-weight: 500;
             letter-spacing: 1px;
