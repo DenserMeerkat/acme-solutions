@@ -13,6 +13,10 @@ html {
   box-sizing: border-box;
 }
 
+li {
+  list-style-type: none;
+}
+
 :root {
   --dot-size: 1px;
   --dot-space: 16px;
@@ -71,6 +75,7 @@ html {
 }
 
 body {
+  position: relative;
   z-index: -5;
   background-color: hsla(var(--background));
   color: hsla(var(--foreground));
@@ -166,5 +171,21 @@ h2 {
 
   .heading::before {
     left: -1rem;
+  }
+}
+
+.section-spacer {
+  padding-top: 6rem;
+
+  @media (max-width: 425px) {
+    padding-top: 5rem;
+  }
+}
+
+.section-spacer-1 {
+  padding-top: 4rem;
+
+  @media (max-width: 425px) {
+    padding-top: 3rem;
   }
 }

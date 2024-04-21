@@ -21,10 +21,8 @@
   background: linear-gradient(hsla(var(--muted), 0.4), hsla(var(--muted), 0.6));
   font-size: 1.2rem;
   letter-spacing: 1px;
-  transition: all 0.2s ease-in-out;
 
   &:hover {
-    transition: all 0.2s ease-in-out;
     background: linear-gradient(
       hsla(var(--muted), 0.9),
       hsla(var(--muted), 0.7)
@@ -53,6 +51,7 @@
 
 input[type="checkbox"]:checked + .accordion-label {
   color: hsla(var(--primary));
+  font-weight: 600;
   background: linear-gradient(hsla(var(--muted), 0.9), hsla(var(--muted), 0.7));
 
   .icon {

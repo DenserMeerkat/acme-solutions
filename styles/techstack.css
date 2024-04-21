@@ -1,0 +1,115 @@
+.tech-stack {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+  padding: 4rem 1rem;
+
+  .tech-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: var(--radius);
+    border: 2px solid hsla(var(--border));
+    overflow: hidden;
+
+    .head {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      width: 100%;
+      padding: 1rem;
+      border-bottom: 2px solid hsla(var(--border));
+      color: hsla(var(--primary), 0.9);
+      background: linear-gradient(
+        90deg,
+        hsla(var(--muted), 0.4),
+        hsla(var(--muted), 0.7)
+      );
+
+      h3 {
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
+
+      @media (max-width: 1280px) {
+        h3 {
+          font-size: 1.3rem;
+        }
+      }
+
+      @media (max-width: 460px) {
+        .icon {
+          display: none;
+        }
+        h3 {
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+    .content {
+      padding: 2rem 1rem 3rem;
+      background: -webkit-linear-gradient(
+        hsla(var(--muted), 0.2),
+        hsla(var(--muted), 0.3)
+      );
+      height: 100%;
+
+      ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+
+        li {
+          display: grid;
+          place-content: center;
+          font-weight: 500;
+          color: hsla(var(--foreground), 0.75);
+          transition: color 0.3s;
+          cursor: pointer;
+
+          .tech-icon {
+            font-size: clamp(2.5rem, 6vw, 3.5rem);
+          }
+
+          &:hover {
+            color: hsla(var(--primary));
+            transition: color 0.3s;
+          }
+        }
+
+        @media (max-width: 1280px) {
+          ul {
+            gap: 1rem;
+          }
+        }
+
+        @media (max-width: 460px) {
+          ul {
+            gap: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+    padding: 3rem 1rem;
+  }
+
+  @media (max-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 3rem 0.5rem;
+  }
+
+  @media (max-width: 320px) {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding: 3rem 0.5rem;
+  }
+}

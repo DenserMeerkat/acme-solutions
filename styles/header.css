@@ -111,7 +111,6 @@ nav {
       height: 32px;
       position: relative;
       border-radius: 9999px;
-      list-style: none;
       transition: all 0.2s;
 
       @media (max-width: 640px) {

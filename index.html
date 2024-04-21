@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./styles/ripple.css" />
     <link rel="stylesheet" href="./styles/header.css" />
     <link rel="stylesheet" href="./styles/hero.css" />
+    <link rel="stylesheet" href="./styles/techstack.css" />
     <link rel="stylesheet" href="./styles/testimonials.css" />
     <link rel="stylesheet" href="./styles/services.css" />
     <link rel="stylesheet" href="./styles/footer.css" />
@@ -17,7 +18,24 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"
+      integrity="sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </head>
   <body class="dark">
     <div class="underlay underlay-1"></div>
@@ -90,7 +108,95 @@
         </div>
       </section>
       <section id="about">
-        <h2 class="heading">About Us</h2>
+        <div id="techstack about" class="section-spacer"></div>
+        <h2 class="heading">Tech Stack</h2>
+        <div class="tech-stack">
+          <div class="tech-col">
+            <div class="head">
+              <i data-lucide="monitor-smartphone" class="icon"></i>
+              <h3>Frontend</h3>
+            </div>
+            <div class="content">
+              <ul>
+                <li><i class="tech-icon fa-brands fa-react"></i></li>
+                <li><i class="tech-icon fa-brands fa-angular"></i></li>
+                <li><i class="tech-icon fa-brands fa-vuejs"></i></li>
+                <li><i class="tech-icon fa-brands fa-html5"></i></li>
+                <li><i class="tech-icon fa-brands fa-css3-alt"></i></li>
+                <li><i class="tech-icon fa-brands fa-js-square"></i></li>
+              </ul>
+            </div>
+          </div>
+          <div class="tech-col">
+            <div class="head">
+              <i data-lucide="server" class="icon"></i>
+              <h3>Backend</h3>
+            </div>
+            <div class="content">
+              <ul>
+                <li><i class="tech-icon fa-brands fa-node-js"></i></li>
+                <li><i class="tech-icon fa-brands fa-python"></i></li>
+                <li><i class="tech-icon fa-brands fa-java"></i></li>
+                <li><i class="tech-icon fa-brands fa-php"></i></li>
+                <li><i class="tech-icon fa-brands fa-stripe"></i></li>
+              </ul>
+            </div>
+          </div>
+          <div class="tech-col">
+            <div class="head">
+              <i data-lucide="database" class="icon"></i>
+              <h3>Database</h3>
+            </div>
+            <div class="content">
+              <ul>
+                <li><i class="tech-icon devicon-mysql-original"></i></li>
+                <li><i class="tech-icon devicon-postgresql-plain"></i></li>
+                <li>
+                  <i class="tech-icon devicon-mongodb-plain"></i>
+                </li>
+                <li>
+                  <i class="tech-icon devicon-firebase-plain"></i>
+                </li>
+                <li><i class="tech-icon devicon-sqlite-plain"></i></li>
+                <li><i class="tech-icon devicon-supabase-plain"></i></li>
+              </ul>
+            </div>
+          </div>
+          <div class="tech-col">
+            <div class="head">
+              <i data-lucide="cloud-upload" class="icon"></i>
+              <h3>Cloud</h3>
+            </div>
+            <div class="content">
+              <ul>
+                <li>
+                  <i class="tech-icon devicon-amazonwebservices-plain"></i>
+                </li>
+                <li><i class="tech-icon devicon-azure-plain"></i></li>
+                <li>
+                  <i class="tech-icon devicon-googlecloud-plain"></i>
+                </li>
+                <li><i class="tech-icon devicon-digitalocean-plain"></i></li>
+                <li><i class="tech-icon devicon-heroku-original"></i></li>
+              </ul>
+            </div>
+          </div>
+          <div class="tech-col">
+            <div class="head">
+              <i data-lucide="smartphone" class="icon"></i>
+              <h3>Mobile</h3>
+            </div>
+            <div class="content">
+              <ul>
+                <li><i class="tech-icon fa-brands fa-android"></i></li>
+                <li><i class="tech-icon devicon-kotlin-plain"></i></li>
+                <li><i class="tech-icon fa-brands fa-swift"></i></li>
+                <li><i class="tech-icon devicon-flutter-plain"></i></li>
+                <li><i class="tech-icon fa-brands fa-react"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </section>
       <section id="services">
         <h2 class="heading">Services</h2>
@@ -192,160 +298,158 @@
           </div>
         </div>
 
-        <div>
-          <div id="testimonials"></div>
-          <h2 class="heading">Testimonials</h2>
-          <div class="slider">
-            <div class="slide-track">
-              <div class="slide">
-                <div class="head">
-                  <img
-                    src="https://i.pravatar.cc/50?u=a042581f4e2902asdqwed"
-                    alt="Testimonial image 1"
-                    height="50"
-                    width="50"
-                  />
-                  <div class="identity">
-                    <span class="name">John Smith</span>
-                    <span class="designation">CEO, Product Company</span>
-                  </div>
-                </div>
-                <div class="content">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam nec purus nec nulla tincidunt tincidunt. Nullam
-                    suscipit, nunc nec lacinia.
-                  </p>
-                </div>
-                <div class="footer">
-                  <span class="rating">⭐️⭐️⭐️⭐️⭐️</span>
-                  <span class="date">2 days ago</span>
+        <div id="testimonials" class="section-spacer"></div>
+        <h2 class="heading">Testimonials</h2>
+        <div class="slider">
+          <div class="slide-track">
+            <div class="slide">
+              <div class="head">
+                <img
+                  src="https://i.pravatar.cc/50?u=a042581f4e2902asdqwed"
+                  alt="Testimonial image 1"
+                  height="50"
+                  width="50"
+                />
+                <div class="identity">
+                  <span class="name">John Smith</span>
+                  <span class="designation">CEO, Product Company</span>
                 </div>
               </div>
-              <div class="slide">
-                <div class="head">
-                  <img
-                    src="https://i.pravatar.cc/50?u=a042581f4e29dfsdqwed"
-                    alt="Testimonial image 2"
-                    height="50"
-                    width="50"
-                  />
-                  <div class="identity">
-                    <span class="name">Jane Doe</span>
-                    <span class="designation">CTO, AI Company</span>
-                  </div>
-                </div>
-                <div class="content">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam nec purus nec nulla tincidunt tincidunt. Nullam
-                    suscipit, nunc nec lacinia.
-                  </p>
-                </div>
-                <div class="footer">
-                  <span class="rating">⭐️⭐️⭐️⭐️⭐️</span>
-                  <span class="date">1 week ago</span>
+              <div class="content">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Nullam nec purus nec nulla tincidunt tincidunt. Nullam
+                  suscipit, nunc nec lacinia.
+                </p>
+              </div>
+              <div class="footer">
+                <span class="rating">⭐️⭐️⭐️⭐️⭐️</span>
+                <span class="date">2 days ago</span>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="head">
+                <img
+                  src="https://i.pravatar.cc/50?u=a042581f4e29dfsdqwed"
+                  alt="Testimonial image 2"
+                  height="50"
+                  width="50"
+                />
+                <div class="identity">
+                  <span class="name">Jane Doe</span>
+                  <span class="designation">CTO, AI Company</span>
                 </div>
               </div>
-              <div class="slide">
-                <div class="head">
-                  <img
-                    src="https://i.pravatar.cc/50?u=a04r902asdqwed"
-                    alt="Testimonial image 3"
-                    height="50"
-                    width="50"
-                  />
-                  <div class="identity">
-                    <span class="name">John Doe</span>
-                    <span class="designation">CFO, Sales Company</span>
-                  </div>
-                </div>
-                <div class="content">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam nec purus nec nulla tincidunt tincidunt. Nullam
-                    suscipit, nunc nec lacinia.
-                  </p>
-                </div>
-                <div class="footer">
-                  <span class="rating">⭐️⭐️⭐️⭐️</span>
-                  <span class="date">1 month ago</span>
+              <div class="content">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Nullam nec purus nec nulla tincidunt tincidunt. Nullam
+                  suscipit, nunc nec lacinia.
+                </p>
+              </div>
+              <div class="footer">
+                <span class="rating">⭐️⭐️⭐️⭐️⭐️</span>
+                <span class="date">1 week ago</span>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="head">
+                <img
+                  src="https://i.pravatar.cc/50?u=a04r902asdqwed"
+                  alt="Testimonial image 3"
+                  height="50"
+                  width="50"
+                />
+                <div class="identity">
+                  <span class="name">John Doe</span>
+                  <span class="designation">CFO, Sales Company</span>
                 </div>
               </div>
-              <div class="slide">
-                <div class="head">
-                  <img
-                    src="https://i.pravatar.cc/50?u=a042581fqw2asdqwed"
-                    alt="Testimonial image 4"
-                    height="50"
-                    width="50"
-                  />
-                  <div class="identity">
-                    <span class="name">Jane Smith</span>
-                    <span class="designation">COO, Service Company</span>
-                  </div>
-                </div>
-                <div class="content">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam nec purus nec nulla tincidunt tincidunt. Nullam
-                    suscipit, nunc nec lacinia.
-                  </p>
-                </div>
-                <div class="footer">
-                  <span class="rating">⭐️⭐️⭐️⭐️⭐️</span>
-                  <span class="date">2 months ago</span>
+              <div class="content">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Nullam nec purus nec nulla tincidunt tincidunt. Nullam
+                  suscipit, nunc nec lacinia.
+                </p>
+              </div>
+              <div class="footer">
+                <span class="rating">⭐️⭐️⭐️⭐️</span>
+                <span class="date">1 month ago</span>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="head">
+                <img
+                  src="https://i.pravatar.cc/50?u=a042581fqw2asdqwed"
+                  alt="Testimonial image 4"
+                  height="50"
+                  width="50"
+                />
+                <div class="identity">
+                  <span class="name">Jane Smith</span>
+                  <span class="designation">COO, Service Company</span>
                 </div>
               </div>
-              <div class="slide">
-                <div class="head">
-                  <img
-                    src="https://i.pravatar.cc/50?u=a042581f4e29wqe2asdqwed"
-                    alt="Testimonial image 1"
-                    height="50"
-                    width="50"
-                  />
-                  <div class="identity">
-                    <span class="name">Ralph Raymond</span>
-                    <span class="designation">CFO, Corporate Company</span>
-                  </div>
-                </div>
-                <div class="content">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam nec purus nec nulla tincidunt tincidunt. Nullam
-                    suscipit, nunc nec lacinia.
-                  </p>
-                </div>
-                <div class="footer">
-                  <span class="rating">⭐️⭐️⭐️⭐️</span>
-                  <span class="date">2 days ago</span>
+              <div class="content">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Nullam nec purus nec nulla tincidunt tincidunt. Nullam
+                  suscipit, nunc nec lacinia.
+                </p>
+              </div>
+              <div class="footer">
+                <span class="rating">⭐️⭐️⭐️⭐️⭐️</span>
+                <span class="date">2 months ago</span>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="head">
+                <img
+                  src="https://i.pravatar.cc/50?u=a042581f4e29wqe2asdqwed"
+                  alt="Testimonial image 1"
+                  height="50"
+                  width="50"
+                />
+                <div class="identity">
+                  <span class="name">Ralph Raymond</span>
+                  <span class="designation">CFO, Corporate Company</span>
                 </div>
               </div>
-              <div class="slide">
-                <div class="head">
-                  <img
-                    src="https://i.pravatar.cc/50?u=a042581f4e2902asdqwed"
-                    alt="Testimonial image 1"
-                    height="50"
-                    width="50"
-                  />
-                  <div class="identity">
-                    <span class="name">John Smith</span>
-                    <span class="designation">CEO, Product Company</span>
-                  </div>
+              <div class="content">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Nullam nec purus nec nulla tincidunt tincidunt. Nullam
+                  suscipit, nunc nec lacinia.
+                </p>
+              </div>
+              <div class="footer">
+                <span class="rating">⭐️⭐️⭐️⭐️</span>
+                <span class="date">2 days ago</span>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="head">
+                <img
+                  src="https://i.pravatar.cc/50?u=a042581f4e2902asdqwed"
+                  alt="Testimonial image 1"
+                  height="50"
+                  width="50"
+                />
+                <div class="identity">
+                  <span class="name">John Smith</span>
+                  <span class="designation">CEO, Product Company</span>
                 </div>
-                <div class="content">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam nec purus nec nulla tincidunt tincidunt. Nullam
-                    suscipit, nunc nec lacinia.
-                  </p>
-                </div>
-                <div class="footer">
-                  <span class="rating">⭐️⭐️⭐️⭐️⭐️</span>
-                  <span class="date">2 days ago</span>
-                </div>
+              </div>
+              <div class="content">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Nullam nec purus nec nulla tincidunt tincidunt. Nullam
+                  suscipit, nunc nec lacinia.
+                </p>
+              </div>
+              <div class="footer">
+                <span class="rating">⭐️⭐️⭐️⭐️⭐️</span>
+                <span class="date">2 days ago</span>
               </div>
             </div>
           </div>

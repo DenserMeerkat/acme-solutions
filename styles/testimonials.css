@@ -141,11 +141,3 @@
     }
   }
 }
-
-#testimonials {
-  padding-top: 6rem;
-
-  @media (max-width: 425px) {
-    padding-top: 5rem;
-  }
-}
